@@ -28,9 +28,3 @@ class transfer extends Simulation{
   ).protocols(httpConf);
    
 }
-  
-
-
-
-
-  
