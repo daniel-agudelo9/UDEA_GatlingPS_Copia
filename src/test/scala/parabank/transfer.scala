@@ -23,8 +23,14 @@ class transfer extends Simulation{
     )
 
   // 3 Load Scenario
-  // 3 - Injection (closed model): ramp-up suave, luego steady-state a 100 concurrentes
-  val injectionProfile = Seq(
-    rampConcurrentUsers(0) to 100 during (30.seconds), // warm-up / ramp
-    constantConcurrentUsers(100) during (3.minutes)    // steady state para medir p95
-  )
+  setUp(
+    scn.inject(rampUsersPerSec(5).to(15).during(30))
+  ).protocols(httpConf);
+   
+}
+  
+
+
+
+
+  
