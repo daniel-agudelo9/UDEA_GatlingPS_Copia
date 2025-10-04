@@ -6,15 +6,14 @@ object Data{
     val password = "demo"
     val fromAccountId = "12456"
     val toAccountId = "12678"
-    val amount = "1"
 
       // IDs de ejemplo (ajusta si tu colección usa otros)
     val customerId = "12212"
-    val fromAccountId = "12456"
     val amount = "5000"
     val downPayment = "500"
     
 }
+
 
 
 
