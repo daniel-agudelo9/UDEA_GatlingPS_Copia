@@ -24,7 +24,7 @@ class RequestLoan extends Simulation {
         .queryParam("fromAccountId", fromAccountId)
         .check(status.is(200))
         // Opcional: comprobar que la respuesta tenga un campo (ajusta según respuesta real)
-        .check(jsonPath("$.approved").ofType[Boolean].saveAs("loanApproved").optional)
+        .check(jsonPath("$.approved").ofType[Boolean].saveAs("loanApproved"))
     )
 
   // 3. Load profile -> 150 usuarios concurrentes durante 60s (criterio de la historia)
